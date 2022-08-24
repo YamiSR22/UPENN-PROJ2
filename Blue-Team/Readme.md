@@ -108,3 +108,17 @@
 * What configuration can be set on the host to control access?
    * Any access to the webDAV folder is only permitted by users with complex username and passwords when it comes to conjunction with other mitigation strategies.
    * Ensuring that the firewall security policy prevents all other access and creating a whitelist of trusted IP addresses.
+
+## Mitigation: Identifying Reverse Shell Uploads ## 
+   
+<b>Alarm<b>
+* What kind of alarm can be set to detect future file uploads?
+   * Setting an alert that can detect any traffic attempting to access port 4444.
+   * Setting an alert for any files being uploaded into the /web/webDAV folder.
+* What threshold would you set to activate this alarm?
+   * Alert email and log when “put” request methods are made, on protected folders, from non-trusted IPs
+<b>System Hardening<b>
+* What configuration can be set on the host to block file uploads?
+   * Ensuring only necessary ports are open
+   * Blocking all IP addresses other than whitelisted IP addresses
+   * Giving permission to only read the /webDav folder, this prevent payloads from being uploaded
