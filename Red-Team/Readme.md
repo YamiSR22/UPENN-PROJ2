@@ -21,8 +21,9 @@
 
 ## Exploitation: Nmap - Open Port 80 ##
 
-<b>* Tools & Processes:<b>
-I exploited the vulnerability by using Nmap. An Nmap scan shows which ports are open and its service. In this case, when doing an Nmap scan, it showed that port 80/tcp and 22/tcp were open. When typing in the ip address of the machine on a web browser, I was able to gain access to the server with the company’s directories.
+* <b>Tools & Processes:<b>
+
+  * I exploited the vulnerability by using Nmap. An Nmap scan shows which ports are open and its service. In this case, when doing an Nmap scan, it showed that port 80/tcp and 22/tcp were open. When typing in the ip address of the machine on a web browser, I was able to gain access to the server with the company’s directories.
   
 <b>* Achievements:<b>
 I was able to identify the IP address and the exposed services of the target VM.
