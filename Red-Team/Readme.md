@@ -1,2 +1,2 @@
-# Red-Team Security Assessment #
-# Recon: Describing the Target #
+# Red-Team Security Assessment
+Recon: Describing the Target #
