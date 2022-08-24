@@ -36,10 +36,10 @@ I was also able to gain access to sensitive information and was able to discover
  
 ## Explotation: Authentication Management ##
 
-<b>* Tools & Processes:<b>
+* <b>Tools & Processes:<b>
 I exploited the vulnerability by using Brute Force Attack on the password for the hidden directory by using Hydra. I used Ashton’s name, ran the Hydra attack against the directory. The tool I used to crack the hashed password I used both; the CrackStation website and John-the-ripper. 
 
-<b>* Achievements:<b>  
+* <b>Achievements:<b>  
 The exploitation provided me with the username of ‘ashton’ as well with the password ‘leopoldo’  
  
 <img width="677" alt="CRACKING-HASH" src="https://user-images.githubusercontent.com/100730516/186330498-5f8fa549-b40c-4a4c-9f6a-d8a47e1584a8.png">
