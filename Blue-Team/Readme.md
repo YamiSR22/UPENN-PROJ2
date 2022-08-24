@@ -77,3 +77,34 @@
    * Encrypting data that is contained within confidential folders
    * Renaming folders that contains sensitive/private/company critical data
    * Reviewing IP addresses that causes an alert to be sent: either whitelist or block the IP addresses. 
+   
+## Mitigation: Preventing Brute Force Attacks ## 
+
+<b>Alarm<b>
+* What kind of alarm can be set to detect future brute force attacks?
+   * Setting an alarm that alerts if a 401 error is returned when detecting future brute force attacks.
+   
+<img width="371" alt="Screenshot 2022-08-23 203149" src="https://user-images.githubusercontent.com/100730516/186334768-36fea6b4-aebe-4cb3-9614-4f2ef0f94e24.png">   
+   
+* What threshold would you set to activate this alarm?
+   * Alert email and log when, on protected files and folders, > 5 Error (401) responses occur at any time OR any OK (200) responses occur from non-trusted IPs.
+   
+<b>System Hardening<b>
+* What configuration can be set on the host to block brute force attacks?
+   * Create a password policy that requires password complexity. Then compare the passwords to common passwords lists and prevent users from reusing historical passwords.
+   * Create a policy that locks out accounts for 30 mins after 5 unsuccessful attempts.
+   * Creating a blocked IP based on IP addresses that have 25 unsuccessful attempts in 4 months.
+   
+## Mitigation: Detecting the WebDAV Connection ##
+
+<b>Alarm<b>
+* What kind of alarm can be set to detect future access to this directory?
+   * Create a whitelist of trusted IP Addresses then review the list every 5 months if these users really need access
+   * Setting an alarm on HTTP request, in which it activates on any IP address that is trying to access the webDAV directory outside of those trusted IP addresses. 
+* What threshold would you set to activate this alarm?
+   * Alert email and log when requests are made, on protected files and folders, from non-trusted IPs.
+   
+<b>System Hardening<b>
+* What configuration can be set on the host to control access?
+   * Any access to the webDAV folder is only permitted by users with complex username and passwords when it comes to conjunction with other mitigation strategies.
+   * Ensuring that the firewall security policy prevents all other access and creating a whitelist of trusted IP addresses.
