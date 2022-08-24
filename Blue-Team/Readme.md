@@ -46,5 +46,34 @@
 
 <img width="449" alt="shell-php-in-lhost" src="https://user-images.githubusercontent.com/100730516/186333135-b1ee8905-2376-4efc-9ce8-2802c9ea1502.png">
 
+# Blue Team Proposed Alarms and Mitigation Strategies #
 
+## Mitigation: Blocking the Port Scan ##
+   
+<b>Alarm<b>
+* What kind of alarm can be set to detect future port scans?
+   * Setting an alert be sent once 1000 connections occur in an hour.
+* What threshold would you set to activate this alarm?
+   * Alert email and log when > 3 none port 403 or port 80 scans detected at the same timestamp from the IP occur
 
+<b>System Hardening<b>
+* What configurations can be set on the host to mitigate port scans?
+   * Set server IPtables to drop packet traffic when thresholds are exceeded
+   * Ensure the firewall is regularly patched to minimize new zero-day attack
+   * Regularly run a system port scan to proactivity detect and audit any open ports
+   * Ensure the firewall detects and cuts off the scan attempt in real time.
+
+## Mitigation: Finding the Request for the Hidden Directory ##
+
+<b>Alarm<b>
+* What kind of alarm can be set to detect future unauthorized access?
+   * Setting an alert when future unauthorized access occur.
+* What threshold would you set to activate this alarm?
+   * Maximum if 5 attempts per hour that would trigger an alert to be sent.
+   
+<b>System Hardening<b> 
+ * What configuration can be set on the host to block unwanted access? 
+   * Confidential folders that shouldn’t be shared for public access
+   * Encrypting data that is contained within confidential folders
+   * Renaming folders that contains sensitive/private/company critical data
+   * Reviewing IP addresses that causes an alert to be sent: either whitelist or block the IP addresses. 
