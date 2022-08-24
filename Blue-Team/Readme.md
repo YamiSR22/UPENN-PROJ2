@@ -117,6 +117,7 @@
    * Setting an alert for any files being uploaded into the /web/webDAV folder.
 * What threshold would you set to activate this alarm?
    * Alert email and log when “put” request methods are made, on protected folders, from non-trusted IPs
+
 <b>System Hardening<b>
 * What configuration can be set on the host to block file uploads?
    * Ensuring only necessary ports are open
